@@ -90,6 +90,7 @@ h6 {
   z-index: 997;
 }
 
+
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
@@ -125,7 +126,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -156,7 +157,7 @@ h6 {
 
 
 /* Navmenu - Mobile */
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -494,17 +495,6 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
-  padding: 80px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
   padding: 80px 0;
   display: flex;
   align-items: center;
@@ -519,6 +509,14 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 80%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
 
 .hero .container {
@@ -559,7 +557,7 @@ section,
   color: var(--accent-color);
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
   }
@@ -567,6 +565,7 @@ section,
   .hero p {
     font-size: 20px;
   }
+}
 
 /*--------------------------------------------------------------
 # About Section
@@ -891,9 +890,4 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
 }
